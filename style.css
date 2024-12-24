@@ -1,0 +1,180 @@
+/* Estilização básica */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Lilás claro */
+    color: #333;
+}
+
+header {
+    background-color: #9d5eff; /* Lilás escuro */
+    text-align: center;
+    padding: 20px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #fff;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    flex-wrap: wrap; /* Permite que os itens se quebrem em várias linhas */
+}
+
+nav ul li {
+    margin: 5px 10px; /* Ajuste para dispositivos menores */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Blocos alternados */
+.lilas {
+    background-color: #c397fd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.branco {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite quebra em dispositivos menores */
+}
+
+.content img {
+    width: 100%; /* Ajusta a largura da imagem para o container */
+    max-width: 350px; /* Limite máximo para dispositivos grandes */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.content img:hover {
+    transform: scale(1.1);
+}
+
+.content p {
+    flex: 1;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+/* Músicas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    color: #6a0dad;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    background-color: #9d5eff;
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Empilha os links do menu */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .content {
+        flex-direction: column; /* Empilha a imagem e o texto */
+        gap: 10px;
+    }
+
+    .content img {
+        max-width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+    }
+
+    .content p {
+        text-align: center; /* Centraliza o texto para telas menores */
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em; /* Reduz o tamanho do título */
+    }
+
+    .content img {
+        max-width: 100%;
+    }
+
+    .content p {
+        font-size: 0.9em;
+    }
+}
